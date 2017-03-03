@@ -18,7 +18,6 @@
 <script>
 
 import Velocity from 'velocity-animate'
-const debug = require('debug')('app:FADE-ITEM')
 
 export default {
     name: 'transition-container',
@@ -72,35 +71,3 @@ function getOptions(vm,el){
     }
 }
 </script>
-
-
-
-<style>
-    .fade-enter-active {
-        animation: fade-in 1s ease-in;
-    }
-    .fade-leave-active {
-        animation: fade-out 1s ease-out;
-    }
-    @keyframes fade-in {
-      0% {
-        transform: translateY(-10px);
-        opacity:0;
-      }
-      100% {
-          transform: translateY(0);
-          opacity:1;
-      }
-    }
-
-    @keyframes fade-out {
-      0% {
-        transform: translateY(0);
-        opacity:1;
-      }
-      100% {
-        transform: translateY(-10px);
-        opacity:0;
-      }
-    }
-</style>
